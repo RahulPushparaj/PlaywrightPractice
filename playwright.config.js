@@ -9,8 +9,12 @@ const config = {
   },
   reporter: 'html',
   use: {
+    actionTimeout: 10 * 1000,
+    navigationTimeout: 30 * 1000,
     browserName : 'chromium',
-    headless : false
+    headless : false,
+    //trace: 'retain-on-failure',
+    trace: 'on',
   },
 };
 
