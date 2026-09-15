@@ -1,5 +1,6 @@
 const { test, expect, request } = require('@playwright/test');
-const { class61_APIUtils } = require('./utils/class61_APIUtils');
+//const { class61_APIUtils } = require('../utils/class61_APIUtils');
+const { APIUtils } = require('../utils/class61_APIUtils');
 const loginPayLoad = {userEmail:"pushparajrahulshanthi851@gmail.com",userPassword:"Push@851"};
 const orderPayload = {orders:[{country:"Cuba",productOrderedId:"6960eac0c941646b7a8b3e68"}]}
 
@@ -9,7 +10,8 @@ test.beforeAll( async ()=>
     const apiContext = await request.newContext({
         ignoreHTTPSErrors: true
     })
-    const apiUtils = new class61_APIUtils(apiContext, loginPayLoad);
+    //const apiUtils = new class61_APIUtils(apiContext, loginPayLoad);
+    const apiUtils = new APIUtils(apiContext, loginPayLoad);
     response = await apiUtils.createOrder(orderPayload);
     
 });

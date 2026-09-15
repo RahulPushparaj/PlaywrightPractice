@@ -1,6 +1,6 @@
 const { test, expect, request } = require('@playwright/test');
 const loginPayLoad = {userEmail:"pushparajrahulshanthi851@gmail.com",userPassword:"Push@851"};
-token;
+let token;
 test.beforeAll( async ()=>
 {
     //const apiContext = await request.newContext();
@@ -14,7 +14,7 @@ test.beforeAll( async ()=>
         //200, 201
         expect(loginResponse.ok()).toBeTruthy();
         const loginResponseJson = await loginResponse.json();
-        const token = loginResponseJson.token;
+        token = loginResponseJson.token;
         console.log("Token : " + token);
 });
 
