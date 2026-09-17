@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/class88_ClientAppPO.spec.js",
+    "test": "npx playwright test tests/class11.spec.js",
     "Sanity": "npx playwright test tests/class88_ClientAppPO.spec.js --grep @Sanity",
     "Regression": "npx playwright test tests/class88_ClientAppPO.spec.js --grep @Regression",
     "All": "npx playwright test",
